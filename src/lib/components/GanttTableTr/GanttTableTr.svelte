@@ -1,35 +1,35 @@
 <script lang="ts">
-    // GanttTableRow component
+    // GanttTableTr component
     //
     // A single row within a GanttTable grid. Renders as a <tr> containing
-    // GanttTableData cells for each time period and task header cells.
-    // Used inside GanttTableHead, GanttTableBody, or GanttTableFoot.
+    // GanttTableTd cells for each time period and task header cells.
+    // Used inside GanttTableThead, GanttTableTbody, or GanttTableTfoot.
     //
     // Props:
     //   className — string, optional. CSS class name.
-    //   children — Snippet, required. GanttTableData cells and header cells for this row.
+    //   children — Snippet, required. GanttTableTd cells and header cells for this row.
     //   ...restProps — additional HTML attributes spread onto the <tr>.
     //
     // Syntax:
-    //   <GanttTableRow>
+    //   <GanttTableTr>
     //     <th>Design</th>
-    //     <GanttTableData active>---</GanttTableData>
-    //     <GanttTableData />
-    //   </GanttTableRow>
+    //     <GanttTableTd active>---</GanttTableTd>
+    //     <GanttTableTd />
+    //   </GanttTableTr>
     //
     // Examples:
     //   <!-- Task row with active time periods -->
-    //   <GanttTableRow>
+    //   <GanttTableTr>
     //     <th>Development</th>
-    //     <GanttTableData />
-    //     <GanttTableData active>---</GanttTableData>
-    //     <GanttTableData active>---</GanttTableData>
-    //   </GanttTableRow>
+    //     <GanttTableTd />
+    //     <GanttTableTd active>---</GanttTableTd>
+    //     <GanttTableTd active>---</GanttTableTd>
+    //   </GanttTableTr>
     //
     //   <!-- Header row with time period labels -->
-    //   <GanttTableRow>
+    //   <GanttTableTr>
     //     <th>Task</th><th>Week 1</th><th>Week 2</th><th>Week 3</th>
-    //   </GanttTableRow>
+    //   </GanttTableTr>
     //
     // Keyboard:
     //   None built-in — keyboard navigation is handled at the GanttTable grid level.
@@ -55,15 +55,15 @@
         children,
         ...restProps
     }: {
-        /** GanttTableData cells and header cells for this row. */
+        /** GanttTableTd cells and header cells for this row. */
         children: Snippet;
         [key: string]: unknown;
     } = $props();
 </script>
 
-<!-- GanttTableRow.svelte -->
+<!-- GanttTableTr.svelte -->
 <tr
-    class={`gantt-table-row ${className}`}
+    class={`gantt-table-tr ${className}`}
     {...restProps}
 >
     {@render children()}

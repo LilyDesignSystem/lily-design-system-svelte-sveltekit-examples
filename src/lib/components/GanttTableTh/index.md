@@ -1,4 +1,4 @@
-# GanttTableCol
+# GanttTableTh
 
 ## Overview
 
@@ -23,9 +23,9 @@ A Gantt chart table interactive grid column for planning schedule visualization 
 
 ```svelte
 <colgroup>
-  <GanttTableCol />
-  <GanttTableCol span={5} />
-  <GanttTableCol />
+  <GanttTableTh />
+  <GanttTableTh span={5} />
+  <GanttTableTh />
 </colgroup>
 ```
 
@@ -42,13 +42,13 @@ A Gantt chart table interactive grid column for planning schedule visualization 
 ```svelte
 <!-- src/routes/+page.svelte -->
 <script lang="ts">
-  import GanttTableCol from "$lib/components/GanttTableCol/GanttTableCol.svelte";
+  import GanttTableTh from "$lib/components/GanttTableTh/GanttTableTh.svelte";
 </script>
 
 <colgroup>
-  <GanttTableCol />
-  <GanttTableCol span={5} />
-  <GanttTableCol />
+  <GanttTableTh />
+  <GanttTableTh span={5} />
+  <GanttTableTh />
 </colgroup>
 ```
 

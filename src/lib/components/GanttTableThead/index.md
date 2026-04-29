@@ -1,9 +1,9 @@
-# GanttTableHead
+# GanttTableThead
 
 ## Overview
 
 The header section of a GanttTable, rendered as a <thead> element.
-Contains GanttTableRow elements with column headers for task names,
+Contains GanttTableTr elements with column headers for task names,
 dates, durations, or other Gantt chart metadata.
 
 ## What it does
@@ -21,9 +21,9 @@ A Gantt chart table interactive grid thead for planning schedule visualization <
 ## Usage
 
 ```svelte
-<GanttTableHead>
-  <GanttTableRow><th>Task</th><th>Start</th><th>End</th></GanttTableRow>
-</GanttTableHead>
+<GanttTableThead>
+  <GanttTableTr><th>Task</th><th>Start</th><th>End</th></GanttTableTr>
+</GanttTableThead>
 ```
 
 ## Props
@@ -31,7 +31,7 @@ A Gantt chart table interactive grid thead for planning schedule visualization <
 | Prop | Type | Description |
 |------|------|-------------|
 | `className` | string, optional | CSS class name. |
-| `children` | Snippet, required | GanttTableRow elements with header cells. |
+| `children` | Snippet, required | GanttTableTr elements with header cells. |
 | `...restProps` | additional HTML attributes spread onto the <thead> |  |
 
 ## SvelteKit example
@@ -39,12 +39,12 @@ A Gantt chart table interactive grid thead for planning schedule visualization <
 ```svelte
 <!-- src/routes/+page.svelte -->
 <script lang="ts">
-  import GanttTableHead from "$lib/components/GanttTableHead/GanttTableHead.svelte";
+  import GanttTableThead from "$lib/components/GanttTableThead/GanttTableThead.svelte";
 </script>
 
-<GanttTableHead>
-  <GanttTableRow><th>Task</th><th>Start</th><th>End</th></GanttTableRow>
-</GanttTableHead>
+<GanttTableThead>
+  <GanttTableTr><th>Task</th><th>Start</th><th>End</th></GanttTableTr>
+</GanttTableThead>
 ```
 
 ## Keyboard

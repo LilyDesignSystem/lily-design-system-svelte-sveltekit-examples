@@ -1,16 +1,14 @@
 <script module lang="ts">
   import { defineMeta } from '@storybook/addon-svelte-csf';
-  import GanttTableHead from './GanttTableHead.svelte';
+  import GanttTableTh from './GanttTableTh.svelte';
 
   const { Story } = defineMeta({
-    title: 'Examples/GanttTableHead',
-    component: GanttTableHead,
+    title: 'Examples/GanttTableTh',
+    component: GanttTableTh,
   });
 </script>
 
 <Story
   name="Default"
   tags={['autodocs', '!dev']}
->
-  <tr><th>Header</th></tr>
-</Story>
+/>

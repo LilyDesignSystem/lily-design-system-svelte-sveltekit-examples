@@ -1,9 +1,9 @@
-# GanttTableBody
+# GanttTableTbody
 
 ## Overview
 
 The body section of a GanttTable, rendered as a <tbody> element.
-Contains GanttTableRow elements with task data cells.
+Contains GanttTableTr elements with task data cells.
 
 ## What it does
 
@@ -20,12 +20,12 @@ A Gantt chart table interactive grid tbody for planning schedule visualization <
 ## Usage
 
 ```svelte
-<GanttTableBody>
-  <GanttTableRow>
-    <GanttTableData>Design</GanttTableData>
-    <GanttTableData>Jan 1</GanttTableData>
-  </GanttTableRow>
-</GanttTableBody>
+<GanttTableTbody>
+  <GanttTableTr>
+    <GanttTableTd>Design</GanttTableTd>
+    <GanttTableTd>Jan 1</GanttTableTd>
+  </GanttTableTr>
+</GanttTableTbody>
 ```
 
 ## Props
@@ -33,7 +33,7 @@ A Gantt chart table interactive grid tbody for planning schedule visualization <
 | Prop | Type | Description |
 |------|------|-------------|
 | `className` | string, optional | CSS class name. |
-| `children` | Snippet, required | GanttTableRow elements with data cells. |
+| `children` | Snippet, required | GanttTableTr elements with data cells. |
 | `...restProps` | additional HTML attributes spread onto the <tbody> |  |
 
 ## SvelteKit example
@@ -41,15 +41,15 @@ A Gantt chart table interactive grid tbody for planning schedule visualization <
 ```svelte
 <!-- src/routes/+page.svelte -->
 <script lang="ts">
-  import GanttTableBody from "$lib/components/GanttTableBody/GanttTableBody.svelte";
+  import GanttTableTbody from "$lib/components/GanttTableTbody/GanttTableTbody.svelte";
 </script>
 
-<GanttTableBody>
-  <GanttTableRow>
-    <GanttTableData>Design</GanttTableData>
-    <GanttTableData>Jan 1</GanttTableData>
-  </GanttTableRow>
-</GanttTableBody>
+<GanttTableTbody>
+  <GanttTableTr>
+    <GanttTableTd>Design</GanttTableTd>
+    <GanttTableTd>Jan 1</GanttTableTd>
+  </GanttTableTr>
+</GanttTableTbody>
 ```
 
 ## Keyboard

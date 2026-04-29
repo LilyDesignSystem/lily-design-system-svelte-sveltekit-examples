@@ -1,9 +1,9 @@
-# GanttTableFoot
+# GanttTableTfoot
 
 ## Overview
 
 The footer section of a GanttTable, rendered as a <tfoot> element.
-Contains GanttTableRow elements with summary or aggregate data cells.
+Contains GanttTableTr elements with summary or aggregate data cells.
 
 ## What it does
 
@@ -20,11 +20,11 @@ A Gantt chart table interactive grid tfoot for planning schedule visualization <
 ## Usage
 
 ```svelte
-<GanttTableFoot>
-  <GanttTableRow>
-    <GanttTableData>Total: 12 tasks</GanttTableData>
-  </GanttTableRow>
-</GanttTableFoot>
+<GanttTableTfoot>
+  <GanttTableTr>
+    <GanttTableTd>Total: 12 tasks</GanttTableTd>
+  </GanttTableTr>
+</GanttTableTfoot>
 ```
 
 ## Props
@@ -32,7 +32,7 @@ A Gantt chart table interactive grid tfoot for planning schedule visualization <
 | Prop | Type | Description |
 |------|------|-------------|
 | `className` | string, optional | CSS class name. |
-| `children` | Snippet, required | GanttTableRow elements with footer cells. |
+| `children` | Snippet, required | GanttTableTr elements with footer cells. |
 | `...restProps` | additional HTML attributes spread onto the <tfoot> |  |
 
 ## SvelteKit example
@@ -40,14 +40,14 @@ A Gantt chart table interactive grid tfoot for planning schedule visualization <
 ```svelte
 <!-- src/routes/+page.svelte -->
 <script lang="ts">
-  import GanttTableFoot from "$lib/components/GanttTableFoot/GanttTableFoot.svelte";
+  import GanttTableTfoot from "$lib/components/GanttTableTfoot/GanttTableTfoot.svelte";
 </script>
 
-<GanttTableFoot>
-  <GanttTableRow>
-    <GanttTableData>Total: 12 tasks</GanttTableData>
-  </GanttTableRow>
-</GanttTableFoot>
+<GanttTableTfoot>
+  <GanttTableTr>
+    <GanttTableTd>Total: 12 tasks</GanttTableTd>
+  </GanttTableTr>
+</GanttTableTfoot>
 ```
 
 ## Keyboard

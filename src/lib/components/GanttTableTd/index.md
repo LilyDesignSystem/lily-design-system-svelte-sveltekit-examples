@@ -1,8 +1,8 @@
-# GanttTableData
+# GanttTableTd
 
 ## Overview
 
-A single cell within a GanttTableRow representing a time period in the
+A single cell within a GanttTableTr representing a time period in the
 Gantt table grid. Renders as a <td> with role="gridcell". Supports an
 active state to indicate the task spans this time period, communicated
 via aria-selected for screen readers.
@@ -22,8 +22,8 @@ A Gantt chart table interactive grid data cell for planning schedule visualizati
 ## Usage
 
 ```svelte
-<GanttTableData active>---</GanttTableData>
-<GanttTableData />
+<GanttTableTd active>---</GanttTableTd>
+<GanttTableTd />
 ```
 
 ## Props
@@ -39,13 +39,13 @@ A Gantt chart table interactive grid data cell for planning schedule visualizati
 
 ```svelte
 <!-- Active time period with bar content -->
-<GanttTableData active>---</GanttTableData>
+<GanttTableTd active>---</GanttTableTd>
 
 <!-- Inactive empty time period -->
-<GanttTableData />
+<GanttTableTd />
 
 <!-- Active with milestone marker -->
-<GanttTableData active>◆</GanttTableData>
+<GanttTableTd active>◆</GanttTableTd>
 ```
 
 ## SvelteKit example
@@ -53,11 +53,11 @@ A Gantt chart table interactive grid data cell for planning schedule visualizati
 ```svelte
 <!-- src/routes/+page.svelte -->
 <script lang="ts">
-  import GanttTableData from "$lib/components/GanttTableData/GanttTableData.svelte";
+  import GanttTableTd from "$lib/components/GanttTableTd/GanttTableTd.svelte";
 </script>
 
-<GanttTableData active>---</GanttTableData>
-<GanttTableData />
+<GanttTableTd active>---</GanttTableTd>
+<GanttTableTd />
 ```
 
 ## Keyboard
