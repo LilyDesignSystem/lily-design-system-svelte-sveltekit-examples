@@ -1,15 +1,17 @@
 <script module lang="ts">
   import { defineMeta } from '@storybook/addon-svelte-csf';
-  import DateTimeLocalInput from './DateTimeLocalInput.svelte';
+  import GoToTop from './GoToTop.svelte';
 
   const { Story } = defineMeta({
-    title: 'Examples/DateTimeLocalInput',
-    component: DateTimeLocalInput,
+    title: 'Examples/GoToTop',
+    component: GoToTop,
   });
 </script>
 
 <Story
   name="Default"
   tags={['autodocs', '!dev']}
-  args={{'label':'Datetime Local Input'}}
-/>
+  args={{'label':'GoToTop'}}
+>
+  <span>GoToTop</span>
+</Story>

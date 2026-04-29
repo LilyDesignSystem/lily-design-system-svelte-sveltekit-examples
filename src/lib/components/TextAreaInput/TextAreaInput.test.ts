@@ -1,10 +1,10 @@
 import { render, screen } from "@testing-library/svelte";
 import { describe, expect, test } from "vitest";
-import DateTimeLocalInput from "./DateTimeLocalInput.svelte";
+import TextAreaInput from "./TextAreaInput.svelte";
 
-describe("DateTimeLocalInput", () => {
+describe("TextAreaInput", () => {
     test("renders the component", () => {
-        render(DateTimeLocalInput, { props: { label: "Test" }, context: new Map() });
+        render(TextAreaInput, { props: { label: "Test" }, context: new Map() });
         const el = screen.getByLabelText("Test");
         expect(el).toBeTruthy();
     });
