@@ -1,10 +1,10 @@
 import { render, screen } from "@testing-library/svelte";
 import { describe, expect, test } from "vitest";
-import GanttTableTH from "./GanttTableTH.svelte";
+import DateTimeLocalInput from "./DateTimeLocalInput.svelte";
 
-describe("GanttTableTh", () => {
+describe("DateTimeLocalInput", () => {
     test("renders the component", () => {
-        render(GanttTableTH, { props: { label: "Test" }, context: new Map() });
+        render(DateTimeLocalInput, { props: { label: "Test" }, context: new Map() });
         const el = screen.getByLabelText("Test");
         expect(el).toBeTruthy();
     });

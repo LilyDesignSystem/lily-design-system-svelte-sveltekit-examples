@@ -11,5 +11,5 @@
 <Story
   name="Default"
   tags={['autodocs', '!dev']}
-  args={{'label':'Datetime Local Input'}}
+  args={{'label':'DateTime Local Input'}}
 />

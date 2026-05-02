@@ -1,7 +1,7 @@
 import { render } from "@testing-library/svelte";
 import { describe, expect, test } from "vitest";
 
-import Subject from "./DatetimeView.svelte";
+import Subject from "./DateTimeView.svelte";
 
 // Helper to create a Svelte 5 snippet for children content.
 function textSnippet(text: string) {
@@ -11,7 +11,7 @@ function textSnippet(text: string) {
     }) as any;
 }
 
-describe("DatetimeView", () => {
+describe("DateTimeView", () => {
     test("renders as a <time> element with the date-time-view class", () => {
         const { container } = render(Subject, { props: {
             value: "2026-01-31T10:00:00Z",

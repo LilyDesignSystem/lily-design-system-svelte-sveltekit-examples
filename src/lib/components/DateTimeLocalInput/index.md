@@ -42,7 +42,7 @@ An input for entering a date and time without time zone <input type="datetime-lo
 ## Examples
 
 ```svelte
-<!-- Datetime input with min/max constraints -->
+<!-- DateTime input with min/max constraints -->
 <DateTimeLocalInput label="Appointment" bind:value min="2024-01-01T08:00" max="2024-12-31T18:00" />
 <!-- Required and conditionally disabled -->
 <DateTimeLocalInput label="Departure time" bind:value required disabled={isLocked} />
