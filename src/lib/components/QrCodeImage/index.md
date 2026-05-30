@@ -1,8 +1,8 @@
-# QrCode
+# QrCodeImage
 
 ## Overview
 
-A headless container for displaying a QR code (two-dimensional barcode) that
+A headless container for displaying a QR code (two-dimensional barcode-image) that
 encodes data such as URLs, text, contact information, or other machine-readable
 content. It renders a <div> with role="img" and a required aria-label so screen
 reader users understand what the QR code represents. The consumer provides the
@@ -25,7 +25,7 @@ A QR code image generated from text or URL data.
 ## Usage
 
 ```svelte
-<QrCode label="Scan to visit example.com">{qrSvg}</QrCode>
+<QrCodeImage label="Scan to visit example.com">{qrSvg}</QrCodeImage>
 ```
 
 ## Props
@@ -41,14 +41,14 @@ A QR code image generated from text or URL data.
 
 ```svelte
 <!-- QR code with SVG rendering -->
-<QrCode label="Scan to visit example.com">
+<QrCodeImage label="Scan to visit example.com">
   <svg><!-- QR code SVG paths --></svg>
-</QrCode>
+</QrCodeImage>
 
 <!-- QR code with canvas rendering -->
-<QrCode label="Scan to download the app">
+<QrCodeImage label="Scan to download the app">
   <canvas bind:this={qrCanvas}></canvas>
-</QrCode>
+</QrCodeImage>
 ```
 
 ## SvelteKit example
@@ -56,10 +56,10 @@ A QR code image generated from text or URL data.
 ```svelte
 <!-- src/routes/+page.svelte -->
 <script lang="ts">
-  import QrCode from "$lib/components/QrCode/QrCode.svelte";
+  import QrCodeImage from "$lib/components/QrCodeImage/QrCodeImage.svelte";
 </script>
 
-<QrCode label="Scan to visit example.com">{qrSvg}</QrCode>
+<QrCodeImage label="Scan to visit example.com">{qrSvg}</QrCodeImage>
 ```
 
 ## Keyboard
@@ -70,7 +70,7 @@ A QR code image generated from text or URL data.
 
 - role="img" identifies the container as an image for assistive technologies
 - aria-label provides an accessible description of the encoded content
-- Screen reader users hear the label instead of seeing the visual barcode
+- Screen reader users hear the label instead of seeing the visual barcode-image
 
 ## Internationalization
 
