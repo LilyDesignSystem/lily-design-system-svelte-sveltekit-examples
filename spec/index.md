@@ -2,11 +2,11 @@
 
 Living specification for the SvelteKit 2 example application that demonstrates
 the Lily Design System. Single source of truth for spec-driven development of
-this subproject. For project-wide rules, read the root [spec.md](../spec.md)
+this subproject. For project-wide rules, read the root [spec/index.md](../../spec/index.md)
 first.
 
 This file adds SvelteKit-specific detail and tracks the example app's
-implementation status against the **492 canonical components**.
+implementation status against the **490 canonical components**.
 
 ---
 
@@ -20,7 +20,7 @@ NHS-aligned CSS so visitors can see the design system working end-to-end.
 The app ships:
 
 - The three required routes (`/`, `/components`, `/components/[slug]`) per the
-  root [AGENTS/examples.md](../AGENTS/examples.md).
+  root [AGENTS/examples.md](../../AGENTS/examples.md).
 - Twelve composed-page demos that exercise components together.
 - A complete NHS-aligned stylesheet that targets Lily's kebab-case class hooks
   (no `nhsuk-` prefixes).
@@ -31,7 +31,7 @@ The app ships:
 
 - A SvelteKit 2 app with file-based routing.
 - A `/components/[slug]` route that renders a live demo per component for all
-  492 components (via `component-demos.ts`).
+  490 components (via `component-demos.ts`).
 - 12 composed-page demos: contact-form, dashboard, dialog-flow,
   file-upload-form, navigation-and-menus, page-layout, rating-and-feedback,
   search-and-filter, settings-page, tabbed-interface, task-management,
@@ -86,7 +86,7 @@ lily-design-system-svelte-sveltekit-examples/
 │   │   └── …
 │   ├── lib/
 │   │   ├── components/{PascalCase}/       ← re-exports from headless library
-│   │   ├── data/component-demos.ts        ← slug → demo-HTML map (492 entries)
+│   │   ├── data/component-demos.ts        ← slug → demo-HTML map (490 entries)
 │   │   └── css/nhs.css                    ← NHS-aligned stylesheet
 ├── e2e/components/{kebab-case}.spec.ts    ← Playwright e2e per slug
 ├── playwright.config.ts
@@ -98,7 +98,7 @@ lily-design-system-svelte-sveltekit-examples/
 ## 4. Required routes
 
 Every example subproject must ship these three routes per the root
-[AGENTS/examples.md](../AGENTS/examples.md):
+[AGENTS/examples.md](../../AGENTS/examples.md):
 
 | Route                  | Purpose                                                |
 | ---------------------- | ------------------------------------------------------ |
@@ -108,7 +108,7 @@ Every example subproject must ship these three routes per the root
 
 `/components/[slug]` renders the demo HTML from `component-demos.ts` using
 `{@html demo}`. Demo data lives in `src/lib/data/component-demos.ts` and
-contains **492 entries** (one per canonical slug).
+contains **490 entries** (one per canonical slug).
 
 ## 5. Composed-page demos
 
@@ -136,7 +136,7 @@ Twelve composed-page demos exercise multiple components together:
 - CSS selectors target the kebab-case Lily class names directly. No
   `nhsuk-` prefixes in markup.
 - No CSS framework dependency (Tailwind, DaisyUI, Bootstrap are forbidden).
-- Theme tokens follow the shape in [../AGENTS/theme.md](../AGENTS/theme.md).
+- Theme tokens follow the shape in [../AGENTS/theme.md](../../AGENTS/theme.md).
 
 ## 7. Testing
 
@@ -173,13 +173,13 @@ pnpm exec playwright test            # e2e tests
 ### 9.1 Routes
 
 - [ ] `/` renders home page with skip-link and standard landmarks.
-- [ ] `/components` lists all 492 canonical components, searchable / filterable.
-- [ ] `/components/[slug]` renders a live demo for all 492 slugs.
+- [ ] `/components` lists all 490 canonical components, searchable / filterable.
+- [ ] `/components/[slug]` renders a live demo for all 490 slugs.
 - [ ] All 12 composed-page demos exist and exercise the listed components.
 
 ### 9.2 Demo registry
 
-- [ ] `src/lib/data/component-demos.ts` exports a 492-entry map keyed by
+- [ ] `src/lib/data/component-demos.ts` exports a 490-entry map keyed by
       canonical slug.
 - [ ] Each demo's class hook matches the canonical kebab-case base class.
 - [ ] No orphan slugs (every key exists in `components.tsv`).
@@ -189,7 +189,7 @@ pnpm exec playwright test            # e2e tests
 - [ ] `src/lib/css/nhs.css` targets kebab-case Lily classes.
 - [ ] No `nhsuk-` prefixes in markup.
 - [ ] No CSS-framework imports.
-- [ ] Theme tokens follow [../AGENTS/theme.md](../AGENTS/theme.md).
+- [ ] Theme tokens follow [../AGENTS/theme.md](../../AGENTS/theme.md).
 
 ### 9.4 Accessibility
 
@@ -219,7 +219,7 @@ pnpm exec playwright test            # e2e tests
       `{@html}`.
 - [x] All 12 composed-page demos.
 - [x] Playwright e2e per slug (commit `7a51013b`).
-- [x] Demo registry backfill: `component-demos.ts` covers all 492 canonical
+- [x] Demo registry backfill: `component-demos.ts` covers all 490 canonical
       slugs (per commit `1f1772e1`).
 - [x] TabGroup removal (canonical pattern is TabBar + TabBarButton + TabPanel).
 - [x] Catalog rename: `medical-record-red-box` → `medical-banner-box-for-danger`.
@@ -228,7 +228,7 @@ pnpm exec playwright test            # e2e tests
 
 - [x] `pnpm test` (vitest) passes: **2,007 / 2,007 tests, zero failures**.
 - [x] `pnpm exec playwright test` passes: **1,221 / 1,221 specs**
-      (3 specs per `/components/[slug]` route × 492 slugs).
+      (3 specs per `/components/[slug]` route × 490 slugs).
 - [x] Every component's live demo renders the canonical HTML tag
       (verified by the Playwright catalog sweep).
 
@@ -258,6 +258,6 @@ pnpm exec playwright test            # e2e tests
 - Package manager: pnpm
 - License: MIT or Apache-2.0 or GPL-2.0 or GPL-3.0 or BSD-3-Clause
 - Contact: Joel Parker Henderson <joel@joelparkerhenderson.com>
-- Canonical catalog: [../components.tsv](../components.tsv) — 492 components
-- Root spec: [../spec.md](../spec.md)
-- Sibling headless library: [../lily-design-system-svelte-headless/](../lily-design-system-svelte-headless/)
+- Canonical catalog: [../components.tsv](../../components.tsv) — 490 components
+- Root spec: [../spec/index.md](../../spec/index.md)
+- Sibling headless library: [../lily-design-system-svelte-headless/](../../lily-design-system-svelte-headless/)
